@@ -1,5 +1,5 @@
 
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import '../styles/App.css';
 
 class App extends Component {
@@ -40,7 +40,15 @@ class App extends Component {
   render() {
     return (
       <div id="main">
+         {this.cityList.map((a,index)=>{
+          return(
         
+          <ol key={index}>
+        
+          <li >{a.name}</li>
+          <li>{a.country}</li>
+          </ol>
+          );
       </div>
     )
   }
