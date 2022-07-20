@@ -40,15 +40,13 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-         {this.cityList.map((a,index)=>{
-          return(
-        
-          <ol key={index}>
-        
-          <li >{a.name}</li>
-          <li>{a.country}</li>
-          </ol>
+         <ol>
+        {this.cityList.map(city => {
+          return (
+            <li key={city.name}>{city.country}</li>
           );
+        })}
+      </ol>
       </div>
     )
   }
