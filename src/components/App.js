@@ -41,12 +41,19 @@ class App extends Component {
     return (
       <div id="main">
          <ol>
-        {this.cityList.map(city => {
-          return (
-            <li key={city.name}>{city.country}</li>
-          );
-        })}
+        <li>{this.cityList.name}</li>
+<li>{this.cityList.country}</li>
       </ol>
+{
+  this.cityList.map((item)=>
+                    item.country==='India'
+                    <ol>
+        <li>{item.name}</li>
+<li>{item.country}</li>
+      </ol>
+                    
+                   )
+}
       </div>
     )
   }
