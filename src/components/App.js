@@ -1,5 +1,5 @@
 
-import React, { Component, useState} from "react";
+import React, { Component} from "react";
 import '../styles/App.css';
 
 class App extends Component {
@@ -40,20 +40,14 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-         <ol>
-        <li>{this.cityList.name}</li>
-<li>{this.cityList.country}</li>
-      </ol>
-{
-  this.cityList.map((item)=>
-                    item.country==='India'
-                    <ol>
-        <li>{item.name}</li>
-<li>{item.country}</li>
-      </ol>
-                    
-                   )
-}
+      <ol>
+            {this.cityList.filter((cout)=> cout.country === 
+            'India').map((city, index)=>{
+              return(
+                <li key={`location${index+1}`}>{city.name}</li>
+              )
+            })}
+        </ol>
       </div>
     )
   }
