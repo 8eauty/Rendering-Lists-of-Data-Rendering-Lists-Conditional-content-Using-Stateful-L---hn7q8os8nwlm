@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-      <ol>
+      <ol type="1">
             {this.cityList.filter((cout)=> cout.country === 
             'India').map((city, index)=>{
               return(
