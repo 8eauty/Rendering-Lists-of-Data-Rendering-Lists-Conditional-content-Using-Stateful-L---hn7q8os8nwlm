@@ -40,11 +40,11 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-      <ol type="1">
+      <ol type="this.cityList">
             {this.cityList.filter((cout)=> cout.country === 
-            'India').map((city, index)=>{
+            'India').map((city)=>{
               return(
-                <li key={`location${index+1}`}>{city.name}</li>
+                <li key="location">{city.name}</li>
               )
             })}
         </ol>
